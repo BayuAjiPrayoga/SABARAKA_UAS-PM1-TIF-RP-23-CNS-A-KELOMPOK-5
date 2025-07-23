@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/itemListFragment">
+
+    <!-- Fragments untuk Mahasiswa -->
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.kelompok5.sabaraka.ui.mahasiswa.ItemListFragment"
+        android:label="Daftar Barang"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_borrowHistoryFragment"
+            app:destination="@id/borrowHistoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/borrowHistoryFragment"
+        android:name="com.kelompok5.sabaraka.ui.mahasiswa.BorrowHistoryFragment"
+        android:label="Riwayat Peminjaman"
+        tools:layout="@layout/fragment_borrow_history" />
+
+    <!-- Fragments untuk Admin -->
+    <fragment
+        android:id="@+id/adminItemListFragment"
+        android:name="com.kelompok5.sabaraka.ui.admin.AdminItemListFragment"
+        android:label="Kelola Barang"
+        tools:layout="@layout/fragment_admin_item_list" >
+        <action
+            android:id="@+id/action_adminItemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_adminItemListFragment_to_editItemFragment"
+            app:destination="@id/editItemFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminBorrowRequestFragment"
+        android:name="com.kelompok5.sabaraka.ui.admin.AdminBorrowRequestFragment"
+        android:label="Kelola Peminjaman"
+        tools:layout="@layout/fragment_admin_borrow_request" />
+
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.kelompok5.sabaraka.ui.admin.AddItemFragment"
+        android:label="Tambah Barang"
+        tools:layout="@layout/fragment_add_item" />
+
+    <fragment
+        android:id="@+id/editItemFragment"
+        android:name="com.kelompok5.sabaraka.ui.admin.EditItemFragment"
+        android:label="Edit Barang"
+        tools:layout="@layout/fragment_edit_item">
+        <argument
+            android:name="itemId"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+</navigation>

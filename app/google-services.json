@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "981004897990",
+    "project_id": "sabaraka-d4f2a",
+    "storage_bucket": "sabaraka-d4f2a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981004897990:android:5d9b131c944da6d6ca51c7",
+        "android_client_info": {
+          "package_name": "com.kelompok5.sabaraka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBxpvmSQT-9uVWiEAK8E4UvSV5Zprf-e0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

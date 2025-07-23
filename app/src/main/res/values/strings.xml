@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SABARAKA</string>
+    <string name="total_items_format"> %d</string>
+    <string name="available_items_format"> %d</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_item_list">Daftar Barang</string>
+    <string name="menu_borrow_history">Riwayat Peminjaman</string>
+
+    <!-- Item management -->
+    <string name="add_item">Tambah Barang</string>
+    <string name="edit_item">Edit Barang</string>
+    <string name="delete_item">Hapus Barang</string>
+    <string name="delete_confirmation">Apakah Anda yakin ingin menghapus %s?</string>
+    <string name="item_deleted">Barang berhasil dihapus</string>
+    <string name="item_delete_failed">Gagal menghapus barang</string>
+
+    <!-- Borrowing -->
+    <string name="borrow_item">Pinjam Barang</string>
+    <string name="return_item">Kembalikan Barang</string>
+    <string name="borrow_success">Permintaan peminjaman berhasil diajukan</string>
+    <string name="borrow_failed">Gagal mengajukan peminjaman</string>
+
+    <!-- Common -->
+    <string name="error_loading_data">Gagal memuat data: %s</string>
+    <string name="no_items_available">Tidak ada barang tersedia</string>
+    <string name="search_hint">Cari barang...</string>
+    <string name="please_wait">Mohon tunggu...</string>
+
+    <!-- Accessibility -->
+    <string name="item_image">Gambar Barang</string> <!-- Tambahkan entri ini -->
+</resources>
