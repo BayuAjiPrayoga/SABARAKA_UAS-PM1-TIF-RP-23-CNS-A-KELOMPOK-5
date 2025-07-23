@@ -91,7 +91,7 @@ class WelcomeActivity : AppCompatActivity() {
             email = "admin@sabaraka.com",
             name = "Administrator",
             role = "admin",
-            nim = ""
+            nim = "20250724"
         )
 
         db.collection("users").document(userId)
