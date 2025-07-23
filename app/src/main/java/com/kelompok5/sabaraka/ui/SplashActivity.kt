@@ -6,14 +6,11 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.kelompok5.sabaraka.LoginActivity
-import com.kelompok5.sabaraka.MainActivity
+import com.kelompok5.sabaraka.WelcomeActivity
 import com.kelompok5.sabaraka.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
-    private lateinit var auth: FirebaseAuth
     private val TAG = "SplashActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,27 +26,14 @@ class SplashActivity : AppCompatActivity() {
             Log.e(TAG, "Failed to bind layout: ${e.message}")
         }
 
-        auth = FirebaseAuth.getInstance()
-
         // Hide status bar for immersive experience
         supportActionBar?.hide()
 
-        // Delay for 3 seconds then check authentication
+        // Delay for 3 seconds then navigate to WelcomeActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            Log.d(TAG, "Delay finished, checking authentication")
-            checkAuthenticationAndNavigate()
+            Log.d(TAG, "Delay finished, navigating to WelcomeActivity")
+            startActivity(Intent(this, WelcomeActivity::class.java))
+            finish()
         }, 3000)
-    }
-
-    private fun checkAuthenticationAndNavigate() {
-        val currentUser = auth.currentUser
-        if (currentUser != null) {
-            Log.d(TAG, "User logged in, navigating to MainActivity")
-            startActivity(Intent(this, MainActivity::class.java))
-        } else {
-            Log.d(TAG, "User not logged in, navigating to LoginActivity")
-            startActivity(Intent(this, LoginActivity::class.java))
-        }
-        finish()
     }
 }
